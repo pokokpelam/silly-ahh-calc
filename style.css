@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+}
+
+#calculator {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+#display{
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+}
+
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+#explosion-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;              /* Full screen width */
+    height: 100vh;             /* Full screen height */
+    display: none;             /* Hidden by default */
+    align-items: center;       /* Vertically center */
+    justify-content: center;   /* Horizontally center */
+    background: transparent;
+    z-index: 999;
+    pointer-events: none;      /* So it doesn't block clicks */
+}
+
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 0%);
+    color:white;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(0, 0%, 40%);
+}
+
+button:active{
+    background-color: hsl(0, 0%, 60%);
+}
+
+.operator-btn{
+    background-color: hsl(32, 100%, 50%);
+}
+
+.operator-btn:hover{
+    background-color: hsl(32, 100%, 60%);
+}
+
+.operator-btn:hover{
+    background-color: hsl(32, 100%, 90%);
+}

@@ -12,16 +12,15 @@ body {
     max-width: 90vw;
     margin: 50px auto;
     padding: 20px;
-    border-radius: 12px;
-    background-color: white;
+    border-radius: 15px;
+    background-color: hsl(0, 0%, 15%);
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     font-family: Arial, Helvetica, sans-serif;
-    background-color: hsl(0, 0%, 15%);
-    border-radius: 15px;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
-#display{
+#display {
     width: 100%;
     padding: 20px;
     font-size: 5rem;
@@ -29,58 +28,61 @@ body {
     border: none;
     background-color: hsl(0, 0%, 20%);
     color: white;
+    box-sizing: border-box;
 }
 
-#keys{
+#keys {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
     gap: 10px;
     padding: 25px;
+    box-sizing: border-box;
 }
 
 #explosion-overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;              /* Full screen width */
-    height: 100vh;             /* Full screen height */
-    display: none;             /* Hidden by default */
-    align-items: center;       /* Vertically center */
-    justify-content: center;   /* Horizontally center */
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
     background: transparent;
     z-index: 999;
-    pointer-events: none;      /* So it doesn't block clicks */
+    pointer-events: none;
 }
 
-button{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+button {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
     border: none;
     background-color: hsl(0, 0%, 0%);
-    color:white;
-    font-size: 3rem;
+    color: white;
+    font-size: 2.5rem;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
-button:hover{
+button:hover {
     background-color: hsl(0, 0%, 40%);
 }
 
-button:active{
+button:active {
     background-color: hsl(0, 0%, 60%);
 }
 
-.operator-btn{
+.operator-btn {
     background-color: hsl(32, 100%, 50%);
 }
 
-.operator-btn:hover{
+.operator-btn:hover {
     background-color: hsl(32, 100%, 60%);
 }
 
-.operator-btn:hover{
-    background-color: hsl(32, 100%, 90%);
+.operator-btn:active {
+    background-color: hsl(32, 100%, 70%);
 }
 
 @media (max-width: 600px) {
@@ -90,23 +92,21 @@ button:active{
     }
 
     #display {
-        font-size: 22px;
-        height: 40px;
+        font-size: 2.5rem;
+        height: auto;
+        padding: 15px;
     }
 
     #keys {
-        grid-template-columns: repeat(4, 1fr); /* still 4 columns */
         gap: 8px;
         padding: 15px;
     }
 
-    #keys button {
-        font-size: 18px;
-        padding: 10px;
+    button {
+        font-size: 1.5rem;
     }
 
     #explosion-img {
         width: 200px;
     }
 }
-
